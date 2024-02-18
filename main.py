@@ -26,7 +26,7 @@ df['Month'] = df['Joined'].dt.month
 df['Year'] = df['Joined'].dt.year
 df = df.rename(columns={'â†“OVA':'OVA'})
 
-df.drop(columns=['W/F','SM','IR','Joined'], inplace=True)
+df.drop(columns=['W/F','SM','IR','Joined','Loan Date End'], inplace=True)
 
 df['Height (cm)'] = df['Height (cm)'].apply(feet_inches_to_cm)
 df['Weight'] = df['Weight'].apply(lbs_to_kg)
